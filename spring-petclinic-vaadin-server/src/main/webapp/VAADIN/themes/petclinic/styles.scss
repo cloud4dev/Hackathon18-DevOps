@@ -1,0 +1,8 @@
+@import "addons.scss";
+@import "petclinic.scss";
+
+.petclinic {
+  @include addons;
+  @include petclinic;
+}
+

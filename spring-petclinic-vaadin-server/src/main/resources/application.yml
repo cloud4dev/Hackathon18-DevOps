@@ -1,0 +1,11 @@
+url.vets-service: http://localhost:8282/vets
+
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  routes:
+    vets-service: /vet/**
+    visits-service: /visit/**
+    customers-service: /customer/**
+    api-gateway: /gateway/**
+  

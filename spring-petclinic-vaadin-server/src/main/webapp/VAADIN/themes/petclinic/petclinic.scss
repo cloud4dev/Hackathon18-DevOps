@@ -1,0 +1,41 @@
+// Global variable overrides. Must be declared before importing Valo.
+
+	
+.v-generated-body {
+    min-width: 360px;
+    min-height: 640px;
+    overflow: auto;
+}
+
+//Titulo de pantalla de carga
+$v-app-loading-text: "PetClinic Microservices";
+
+
+//Color Spring
+$petclinic-color : #6db33f !default;
+
+//Reglas de diseño
+$v-focus-color: $petclinic-color;
+$v-focus-style: 0 0 3px 2px $v-focus-color;
+$v-selection-color: $v-focus-color !default;
+
+
+
+//Va al final para que funcionen los estilos aplicados
+@import "../valo/valo.scss";
+
+@mixin petclinic {
+  @include valo;
+
+  // Insert your own theme rules here
+  .v-menubar {
+    color: $petclinic-color;
+  }
+  
+  .v-label-title {
+	//color: $petclinic-color;
+    font-weight: bold;
+    white-space: normal;
+  }
+}
+
